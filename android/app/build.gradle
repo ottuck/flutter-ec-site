@@ -58,6 +58,12 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+
+     emulatorOptions {
+        logcatOptions {
+            skipEvents 'app_time_stats'
+        }
+    }
 }
 
 flutter {
