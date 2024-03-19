@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "798737752380",
+    "project_id": "henry-store-94b54",
+    "storage_bucket": "henry-store-94b54.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798737752380:android:3b7b916338349f7d173e39",
+        "android_client_info": {
+          "package_name": "com.example.flutter_study1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJrJNPY84s1AycRlshd1aBTHz3kWAIUsM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
