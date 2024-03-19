@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'SignUpPage.dart';
+import 'package:logger/logger.dart';
+import 'package:flutter_study1/SignUpPage.dart';
 import 'package:flutter_study1/FirebaseAuthService.dart';
 
 class LoginWidget extends StatefulWidget {
@@ -7,13 +8,16 @@ class LoginWidget extends StatefulWidget {
   _LoginWidgetState createState() => _LoginWidgetState();
 }
 
+//Print log messages to the console
+final Logger logger = Logger();
+
 class _LoginWidgetState extends State<LoginWidget> {
   final _formKey = GlobalKey<FormState>();
   final FirebaseAuthService _authService = FirebaseAuthService();
 
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,15 +62,15 @@ class _LoginWidgetState extends State<LoginWidget> {
             SizedBox(height: 20.0),
             ElevatedButton(
               onPressed: () {
-                //Firebase 를 이용한 로그인 처리
-                // _authService.singIn(_emailController.text, _passwordController.text);
+                logger.e('로그인 버튼을 눌렀습니다.');
+                _authService.signIn(_emailController.text, _passwordController.text);
               },
               child: Text('로그인'),
             ),
             SizedBox(height: 20.0),
             TextButton(
               onPressed: (){
-                print('회원가입 버튼을 눌렀습니다.');
+                logger.e('회원가입 버튼을 눌렀습니다.');
                 Navigator.push(context, 
                 MaterialPageRoute(builder: (context) => SignUpPage()));                  
               },

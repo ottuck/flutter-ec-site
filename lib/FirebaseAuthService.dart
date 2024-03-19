@@ -17,12 +17,12 @@ class FirebaseAuthService {
       return userCredential.user;
     } on FirebaseAuthException catch (e) {
       if (e.code == 'weak-password') {
-        // print('비밀번호가 취약합니다.');
+        logger.e('비밀번호가 취약합니다.');
       } else if (e.code == 'email-already-in-use') {
-        // print('이미 사용중인 이메일입니다.');
+        logger.e('이미 사용중인 이메일입니다.');
       }
     } catch (e) {
-      // print(e);
+      logger.e(e);
     }
     return null;
   }
@@ -35,12 +35,12 @@ class FirebaseAuthService {
       return userCredential.user;
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
-        // print('사용자를 찾을 수 없습니다.');
+        logger.e('사용자를 찾을 수 없습니다.');
       } else if (e.code == 'wrong-password') {
-        // print('비밀번호가 틀렸습니다.');
+        logger.e('비밀번호가 틀렸습니다.');
       }
     } catch (e) {
-      // print(e);
+      logger.e(e);
     }
     return null;
   }

@@ -49,12 +49,6 @@ android {
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
-
-        // emulatorOptions {
-        //     logcatOptions {
-        //         skipEvents 'app_time_stats'
-        //     }
-        // }
     }
 
     buildTypes {
