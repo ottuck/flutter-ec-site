@@ -13,7 +13,6 @@ class _SignUpPageState extends State<SignUpPage> {
 
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-
   final _formKey = GlobalKey<FormState>();
 
   @override

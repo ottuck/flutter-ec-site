@@ -137,6 +137,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.12.0"
+<<<<<<< HEAD
   firebase_storage:
     dependency: "direct main"
     description:
@@ -161,6 +162,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.8.0"
+=======
+>>>>>>> cbca190ab417dc43a3464ddc9174e8b7a16ef75f
   flutter:
     dependency: "direct main"
     description: flutter
@@ -184,6 +187,7 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+<<<<<<< HEAD
   http:
     dependency: transitive
     description:
@@ -192,6 +196,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.1"
+=======
+>>>>>>> cbca190ab417dc43a3464ddc9174e8b7a16ef75f
   http_parser:
     dependency: transitive
     description:

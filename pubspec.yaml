@@ -1,5 +1,9 @@
 name: flutter_study1
 description: "A new Flutter project."
+<<<<<<< HEAD
+=======
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+>>>>>>> cbca190ab417dc43a3464ddc9174e8b7a16ef75f
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
@@ -11,17 +15,27 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
   # firebase dependencies for authentication and firestore database access. 
+<<<<<<< HEAD
   firebase_core: ^2.27.1
   firebase_auth: ^4.17.9
   cloud_firestore: ^4.15.9
   firebase_storage: ^11.6.10
+=======
+  firebase_core: ^2.25.0
+  firebase_auth: ^4.17.6
+  cloud_firestore: ^4.13.3
+>>>>>>> cbca190ab417dc43a3464ddc9174e8b7a16ef75f
   #logger for logging
   logger: ^2.1.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+<<<<<<< HEAD
   flutter_lints: ^3.0.1
+=======
+  flutter_lints: ^3.0.0
+>>>>>>> cbca190ab417dc43a3464ddc9174e8b7a16ef75f
 # following page: https://dart.dev/tools/pub/pubspec
 
 flutter:
