@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study1/HomePage.dart';
-
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+import 'package:logger/logger.dart';
+
+//Print log messages to the console
+final Logger logger = Logger(
+  printer: PrettyPrinter(),
+);
 
 Future<void> main() async {
-  WidgetsFlutterBinding
-      .ensureInitialized(); // Ensure Flutter binding is initialized
+  WidgetsFlutterBinding.ensureInitialized(); // Ensure Flutter binding is initialized
 
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,

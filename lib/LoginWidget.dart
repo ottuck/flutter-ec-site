@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:logger/logger.dart';
 import 'package:flutter_study1/SignUpPage.dart';
 import 'package:flutter_study1/FirebaseAuthService.dart';
 
@@ -9,9 +8,6 @@ class LoginWidget extends StatefulWidget {
   @override
   _LoginWidgetState createState() => _LoginWidgetState();
 }
-
-//Print log messages to the console
-final Logger logger = Logger();
 
 class _LoginWidgetState extends State<LoginWidget> {
   final _formKey = GlobalKey<FormState>();
