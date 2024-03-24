@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_study1/LoginWidget';
+import 'package:flutter_study1/LoginWidget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text('Henry Store'),
       ),
-      body: LoginWidget(),
+      body: const LoginWidget(),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
