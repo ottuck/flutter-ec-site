@@ -137,7 +137,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.12.0"
-<<<<<<< HEAD
   firebase_storage:
     dependency: "direct main"
     description:
@@ -162,8 +161,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.8.0"
-=======
->>>>>>> cbca190ab417dc43a3464ddc9174e8b7a16ef75f
   flutter:
     dependency: "direct main"
     description: flutter
@@ -187,7 +184,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-<<<<<<< HEAD
   http:
     dependency: transitive
     description:
@@ -196,8 +192,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.1"
-=======
->>>>>>> cbca190ab417dc43a3464ddc9174e8b7a16ef75f
   http_parser:
     dependency: transitive
     description:
@@ -250,10 +244,10 @@ packages:
     dependency: "direct main"
     description:
       name: logger
-      sha256: b3ff55aeb08d9d8901b767650285872cb1bb8f508373b3e348d60268b0c7f770
+      sha256: "8c94b8c219e7e50194efc8771cd0e9f10807d8d3e219af473d89b06cc2ee4e04"
       url: "https://pub.dev"
     source: hosted
-    version: "2.1.0"
+    version: "2.2.0"
   matcher:
     dependency: transitive
     description:
