@@ -28,8 +28,10 @@ android {
     ndkVersion flutter.ndkVersion
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        // sourceCompatibility JavaVersion.VERSION_1_8
+        // targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_11
+        targetCompatibility JavaVersion.VERSION_1_11
     }
 
     kotlinOptions {
@@ -59,15 +61,11 @@ android {
         }
     }
 
-<<<<<<< HEAD
-   
-=======
      emulatorOptions {
         logcatOptions {
             skipEvents 'app_time_stats'
         }
     }
->>>>>>> cbca190ab417dc43a3464ddc9174e8b7a16ef75f
 }
 
 flutter {
