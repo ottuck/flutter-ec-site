@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study1/FirebaseAuthService.dart';
+import 'package:logger/logger.dart';
+
+final Logger logger = Logger();
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
@@ -62,12 +65,18 @@ class _SignUpPageState extends State<SignUpPage> {
                 ),
                 const SizedBox(height: 20.0),
                 ElevatedButton(
-                  onPressed: () {
-                    if (_formKey.currentState!.validate()) {
-                      _authService.signUp(
-                        _emailController.text,
-                        _passwordController.text,
-                      );
+                  onPressed: () async {
+                    try {
+                      final signUpData = await _authService.signUpWithEmailAndPassword(
+                          _emailController.text, _passwordController.text);
+                      if(signUpData != null && context.mounted) {
+                        logger.e('회원가입 성공');
+                        Navigator.pop(context);
+                      } else {
+                        logger.e('회원가입 실패');
+                      }
+                    } catch (e) {
+                      logger.e('회원가입 데이터가 들어 오지 않음: $e');
                     }
                   },
                   child: const Text('회원가입'),

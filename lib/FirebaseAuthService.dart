@@ -10,16 +10,16 @@ class FirebaseAuthService {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
 
   //회원가입 함수
-  Future<User?> signUp(String email, String password) async {
+  Future<User?> signUpWithEmailAndPassword(String email, String password) async {
     try {
       UserCredential userCredential = await _firebaseAuth
           .createUserWithEmailAndPassword(email: email, password: password);
       return userCredential.user;
     } on FirebaseAuthException catch (e) {
       if (e.code == 'weak-password') {
-        logger.e('비밀번호가 취약합니다.');
+        logger.e('비밀번호가 취약 합니다.');
       } else if (e.code == 'email-already-in-use') {
-        logger.e('이미 사용중인 이메일입니다.');
+        logger.e('이미 사용중인 이메일 입니다.');
       }
     } catch (e) {
       logger.e(e);
@@ -28,7 +28,7 @@ class FirebaseAuthService {
   }
 
   //로그인 함수
-  Future<User?> signIn(String email, String password) async {
+  Future<User?> signInWithEmailAndPassword(String email, String password) async {
     try {
       UserCredential userCredential = await _firebaseAuth
           .signInWithEmailAndPassword(email: email, password: password);

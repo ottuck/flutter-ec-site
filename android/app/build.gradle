@@ -23,15 +23,13 @@ if (flutterVersionName == null) {
 }
 
 android {
-    namespace "com.henrystore.flutter_study1"
+    namespace "com.example.flutter_study1"
     compileSdk flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 
     compileOptions {
-        // sourceCompatibility JavaVersion.VERSION_1_8
-        // targetCompatibility JavaVersion.VERSION_1_8
-        sourceCompatibility JavaVersion.VERSION_1_11
-        targetCompatibility JavaVersion.VERSION_1_11
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 
     kotlinOptions {

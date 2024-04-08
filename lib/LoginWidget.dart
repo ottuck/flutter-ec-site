@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study1/SignUpPage.dart';
 import 'package:flutter_study1/FirebaseAuthService.dart';
+import 'package:logger/logger.dart';
+
+import 'ShoppingMallPage.dart';
+
+//Print log messages to the console
+final Logger logger = Logger();
 
 class LoginWidget extends StatefulWidget {
   const LoginWidget({super.key});
@@ -61,16 +67,27 @@ class _LoginWidgetState extends State<LoginWidget> {
               const SizedBox(height: 20.0),
               ElevatedButton(
                 onPressed: () {
-                  logger.e('로그인 버튼을 눌렀습니다.');
-                  _authService.signIn(
-                      _emailController.text, _passwordController.text);
+                  if (_formKey.currentState!.validate()) { // 폼의 유효성을 검증
+                    _authService.signInWithEmailAndPassword(
+                        _emailController.text, _passwordController.text)
+                        .then((user) {
+                      if (user != null) {
+                        logger.e('로그인 성공');
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const ShoppingMallPage()));
+                      } else {
+                        logger.e('로그인 실패');
+                      }
+                    });
+                  }
                 },
                 child: const Text('로그인'),
               ),
               const SizedBox(height: 20.0),
               TextButton(
                 onPressed: () {
-                  logger.e('회원가입 버튼을 눌렀습니다.');
                   Navigator.push(
                       context,
                       MaterialPageRoute(
