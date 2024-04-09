@@ -23,11 +23,11 @@ class _HomePageState extends State<HomePage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.business),
-            label: '비즈니스',
+            label: '상품',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: '학교',
+            icon: Icon(Icons.shopping_cart),
+            label: '장바구니',
           ),
         ],
       ),

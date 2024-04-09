@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study1/HomePage.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_study1/TopPage.dart';
 import 'firebase_options.dart';
 import 'package:logger/logger.dart';
 
@@ -30,6 +31,6 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const HomePage());
+        home: const TopPage());
   }
 }
