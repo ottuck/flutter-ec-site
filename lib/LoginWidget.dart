@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_study1/SignUpPage.dart';
 import 'package:flutter_study1/FirebaseAuthService.dart';
 import 'package:logger/logger.dart';
-
 import 'ShoppingMallPage.dart';
 
 //Print log messages to the console
@@ -12,10 +11,10 @@ class LoginWidget extends StatefulWidget {
   const LoginWidget({super.key});
 
   @override
-  _LoginWidgetState createState() => _LoginWidgetState();
+  LoginWidgetState createState() => LoginWidgetState();
 }
 
-class _LoginWidgetState extends State<LoginWidget> {
+class LoginWidgetState extends State<LoginWidget> {
   final _formKey = GlobalKey<FormState>();
   final FirebaseAuthService _authService = FirebaseAuthService();
 

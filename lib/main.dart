@@ -1,17 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_study1/HomePage.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_study1/FirstPage.dart';
 import 'package:flutter_study1/TopPage.dart';
 import 'firebase_options.dart';
-import 'package:logger/logger.dart';
-
-//Print log messages to the console
-final Logger logger = Logger(
-  printer: PrettyPrinter(),
-);
 
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized(); // Ensure Flutter binding is initialized
+  WidgetsFlutterBinding.ensureInitialized();
 
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
@@ -28,7 +22,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'HenryStore',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
         home: const TopPage());
