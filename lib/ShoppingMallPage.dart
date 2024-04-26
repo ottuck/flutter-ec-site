@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class ShoppingMallPage extends StatelessWidget {
   const ShoppingMallPage({super.key});
@@ -6,23 +6,17 @@ class ShoppingMallPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [
-        const Text('쇼핑몰 홈페이지'),
-        const SizedBox(height: 20.0),
-        CupertinoButton(
-          child: const Text('상품 목록'),
-          onPressed: () {
-            // Navigate to the product list page
-          },
-        ),
-        const SizedBox(height: 20.0),
-        CupertinoButton(
-          child: const Text('장바구니'),
-          onPressed: () {
-            // Navigate to the shopping cart page
-          },
-        ),
-      ],
+      mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text('쇼핑몰 A'),
+          const SizedBox(height: 20.0),
+          ElevatedButton(
+            onPressed: () {
+              // 쇼핑몰 A의 상품 목록 페이지로 이동
+            },
+            child: const Text('상품 목록'),
+          ),
+        ],
     );
   }
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter_study1/FirstPage.dart';
 import 'package:flutter_study1/TopPage.dart';
 import 'firebase_options.dart';
 

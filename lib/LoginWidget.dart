@@ -71,6 +71,7 @@ class LoginWidgetState extends State<LoginWidget> {
                         _emailController.text, _passwordController.text)
                         .then((user) {
                       if (user != null) {
+                        print("로그인 성공");
                         logger.e('로그인 성공');
                         Navigator.push(
                             context,
